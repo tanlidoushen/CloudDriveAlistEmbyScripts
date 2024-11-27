@@ -77,7 +77,7 @@ if __name__ == "__main__":
     try:
         new_cookies = login_with_autoscan(args.cookies, args.app)
         cookie_data = new_cookies["data"]["cookie"]
-        formatted_cookies = f"UID={cookie_data['UID']}; CID={cookie_data['CID']}; SEID={cookie_data['SEID']; acw_tc={cookie_data['acw_tc']}"
+        formatted_cookies = f"UID={cookie_data['UID']}; CID={cookie_data['CID']}; SEID={cookie_data['SEID']}"
         print("新的 cookies:", formatted_cookies)
     except Exception as e:
         print("生成新的 cookies 失败:", e)
