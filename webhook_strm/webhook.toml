@@ -1,0 +1,34 @@
+[global_params]
+base_url = "http://localhost:9991" 
+enabled = true
+
+[global_params.default_headers]
+content-type = "application/json"
+user-agent = "clouddrive2/{version}"
+authorization = "basic usernamepassword"
+
+[file_system_watcher]
+url = "{base_url}/file_notify?device_name={device_name}&user_name={user_name}&type={event_name}"
+method = "POST"
+enabled = true
+body = '''
+{
+  "device_name": "{device_name}",
+  "user_name": "{user_name}",
+  "version": "{version}",
+  "event_category": "{event_category}",
+  "event_name": "{event_name}",
+  "event_time": "{event_time}",
+  "send_time": "{send_time}",
+  "data": [
+      {
+        "action": "{action}",
+        "is_dir": "{is_dir}",
+        "source_file": "{source_file}",
+        "destination_file": "{destination_file}"
+      }
+  ]
+}
+'''
+[file_system_watcher.headers]
+additional_header = "value"
