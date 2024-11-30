@@ -6,6 +6,8 @@
 
 [pikpak_token](https://github.com/tanlidoushen/CloudDriveAlistEmbyScripts/blob/main/pikpak_token) -> 通过Alist在PikPak的token的有效期内刷新出新的token并更新进Alist中
 
+[115_check](https://github.com/tanlidoushen/CloudDriveAlistEmbyScripts/tree/main/115_check) -> 从Alist提取115 Cloud的cookie以进行签到和许愿树任务
+
 ## 鸣谢
 
 感谢[ChenyangGao/web-mount-packs](https://github.com/ChenyangGao/web-mount-packs)仓库提供的相关API的Python封装
